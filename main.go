@@ -105,10 +105,25 @@ switch color {
 }
 
 //Loops
-i := 1
-for i <= 10 {
+// i := 1
+// for i <= 10 {
+// 	fmt.Println(i)
+// 	i++
+
+//Short method
+// for i := 0; i < 5; i++ {
+// 	fmt.Printf("Number %d\n", i)
+// }
+
+for i := 1; i < 21; i++ {
+	if i % 3 == 0 {
+		fmt.Printf("Fizz %v ", i)
+	} else if i % 5 == 0 {
+		fmt.Printf("Buzz %v ", i)
+	} else if i % 3 == 0 && i % 5 == 0 {
+		fmt.Printf("FizzBuzz %v", i)
+	}
 	fmt.Println(i)
-	i++
 }
 
 }
