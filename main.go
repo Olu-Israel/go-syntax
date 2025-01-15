@@ -182,7 +182,17 @@ for i, car := range cars {
 	fmt.Printf("%s: %s\n", i, car)
 }
 
+//Pointers
+a := 5
+b := &a
+fmt.Println(a, b)
+fmt.Printf("%T\n", b)
 
+//Getting user input
+var firstName string
+fmt.Println("What is your name?")
+fmt.Scan(&firstName)
+fmt.Println("Your name is", firstName)
 
 
 }
