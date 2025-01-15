@@ -104,6 +104,13 @@ switch color {
 		fmt.Println("Color is not red, blue or green")
 }
 
+//Loops
+i := 1
+for i <= 10 {
+	fmt.Println(i)
+	i++
+}
+
 }
 
 
