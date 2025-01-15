@@ -153,9 +153,35 @@ fmt.Println(emails)
 ids := []int{33, 76, 54, 23, 11, 2}
 fmt.Println(ids)
 
-for i, id := range ids {
-	fmt.Printf("%d ID: %d\n", i, id)
+for _, id := range ids {
+	fmt.Printf("ID: %d\n", id)
 }
+
+//Add ids together
+sum:= 0
+for _, id := range ids {
+ sum += id
+
+}
+fmt.Println("Sum", sum)
+
+//Range with map
+fruits := make(map[string]string)
+fruits["a"] = "Apples"
+fruits["b"] = "Bananas"
+fmt.Println(fruits)
+
+for i, fruit := range fruits {
+	fmt.Printf("%s: %s\n", i, fruit)
+}
+
+//Short Hand Map
+cars := map[string]string{"Brand": "Toyota", "Model": "Prado", "Year": "1991"}
+
+for i, car := range cars {
+	fmt.Printf("%s: %s\n", i, car)
+}
+
 
 
 
