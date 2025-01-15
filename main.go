@@ -127,23 +127,35 @@ switch color {
 // }
 
 //Maps
-emails := make(map[string]string)
-emails["Bob"] = "bob@gmail.com"
-emails["Sharon"] = "sharon@gmail.com"
-emails["Mike"] = "Mike@gmail.com"
+// emails := make(map[string]string)
+// emails["Bob"] = "bob@gmail.com"
+// emails["Sharon"] = "sharon@gmail.com"
+// emails["Mike"] = "Mike@gmail.com"
 
-fmt.Println(len(emails["Sharon"]))
+// fmt.Println(len(emails["Sharon"]))
 
-cars := make(map[string]string)
+// cars := make(map[string]string)
 
-cars["Brand"] = "Toyota"
-cars["Model"] = "Camry"
-cars["Year"] = "1964"
+// cars["Brand"] = "Toyota"
+// cars["Model"] = "Camry"
+// cars["Year"] = "1964"
 
-fmt.Println(cars["Brand"],cars["Model"],cars["Year"])
-delete(emails, "Sharon")
+// fmt.Println(cars["Brand"],cars["Model"],cars["Year"])
+// delete(emails, "Sharon")
+// fmt.Println(emails)
+
+emails := map[string]string{"Israel": "israel@gmail.com", "Sharon": "sharon@gmail.com", "Mike": "mike@gmail.com"}
+fmt.Println(emails)
+delete(emails, "Mike")
 fmt.Println(emails)
 
+//Range
+ids := []int{33, 76, 54, 23, 11, 2}
+fmt.Println(ids)
+
+for i, id := range ids {
+	fmt.Printf("%d ID: %d\n", i, id)
+}
 
 
 
