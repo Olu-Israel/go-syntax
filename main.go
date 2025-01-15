@@ -130,8 +130,22 @@ switch color {
 emails := make(map[string]string)
 emails["Bob"] = "bob@gmail.com"
 emails["Sharon"] = "sharon@gmail.com"
+emails["Mike"] = "Mike@gmail.com"
 
-fmt.Println(emails["Bob"])
+fmt.Println(len(emails["Sharon"]))
+
+cars := make(map[string]string)
+
+cars["Brand"] = "Toyota"
+cars["Model"] = "Camry"
+cars["Year"] = "1964"
+
+fmt.Println(cars["Brand"],cars["Model"],cars["Year"])
+delete(emails, "Sharon")
+fmt.Println(emails)
+
+
+
 
 }
 
