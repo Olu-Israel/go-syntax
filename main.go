@@ -202,8 +202,19 @@ type Person struct {
 	age int
 }
 
-Person1 := Person{firstName: "Israel", lastName: "Olu", city: "Lagos", gender: "Male", age: 23}
-fmt.Println(Person1)
+//Greeting Method
+func(p Person)greet()string {
+	return "Hello, my name is " + p.firstName 
+}
+
+// Person1 := Person{firstName: "Israel", lastName: "Olu", city: "Lagos", gender: "Male", age: 23}
+// // Person1 := Person{"Israel", "Olu",  "Lagos",  "Male",  23}
+// fmt.Println(Person1.firstName, Person1.age)
+// Person1.age++
+// fmt.Println(Person1)
+
+fmt.Println(Person1.greet())
+
 
 
 
