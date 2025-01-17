@@ -193,6 +193,7 @@ var firstName string
 fmt.Println("What is your name?")
 fmt.Scan(&firstName)
 fmt.Println("Your name is", firstName)
+fmt.Printf("Your %v is nice", firstName)
 
 
 }
