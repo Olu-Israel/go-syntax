@@ -6,18 +6,23 @@ import (
 	"math"
 )
 
+// func myMessage(name string)string {
+// 	fmt.Printf("Welcome %v", name)
+// }
 
-func greeting(name string) string {
-	return "Hello " + name
-}
+// func greeting(name string) string {
+// 	return "Hello " + name
+// }
 
-func getSum(num1, num2 int)int {
-	return num1 + num2
-}
+// func getSum(num1, num2 int)int {
+// 	return num1 + num2
+// }
 
 //Hello world
 func main() {
 	fmt.Println("Hello, World!")
+
+	// myMessage("Israel")
 
 
 //Data types
@@ -44,8 +49,8 @@ fmt.Println(math.Exp(2))
 
 //Functions
 
-fmt.Println(greeting("Israel"))
-fmt.Println(getSum(3, 4))
+// fmt.Println(greeting("Israel"))
+// fmt.Println(getSum(3, 4))
 
 // //Arrays
 //  var fruitArr [2]string
@@ -188,15 +193,23 @@ b := &a
 fmt.Println(a, b)
 fmt.Printf("%T\n", b)
 
-//Getting user input
-var firstName string
-fmt.Println("What is your name?")
-fmt.Scan(&firstName)
-fmt.Println("Your name is", firstName)
-fmt.Printf("Your %v is nice", firstName)
+//Structs
+type Person struct {
+	firstName string
+	lastName string
+	city string
+	gender string
+	age int
+}
+
+Person1 := Person{firstName: "Israel", lastName: "Olu", city: "Lagos", gender: "Male", age: 23}
+fmt.Println(Person1)
+
 
 
 }
+
+
 
 
 
