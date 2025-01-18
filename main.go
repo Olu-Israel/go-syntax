@@ -2,25 +2,29 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 
 	"math"
 )
 
-// func myMessage(name string)string {
-// 	fmt.Printf("Welcome %v", name)
-// }
+type Person struct {
+	firstName string
+	lastName string
+	city string
+	gender string
+	age int
+}
 
-// func greeting(name string) string {
-// 	return "Hello " + name
-// }
+//Greeting Method value receiver
+func (p Person) greet() string {
+	return "Hello, my name is " + p.firstName + " " + p.lastName + " and i am " + strconv.Itoa(p.age)
+}
 
-// func getSum(num1, num2 int)int {
-// 	return num1 + num2
-// }
 
 //Hello world
 func main() {
-	fmt.Println("Hello, World!")
+	Person1 := Person{"Israel", "Olu", "Lagos", "Male", 37}
+	fmt.Println(Person1.greet())
 
 	// myMessage("Israel")
 
@@ -194,26 +198,8 @@ fmt.Println(a, b)
 fmt.Printf("%T\n", b)
 
 //Structs
-type Person struct {
-	firstName string
-	lastName string
-	city string
-	gender string
-	age int
-}
 
-//Greeting Method
-func(p Person)greet()string {
-	return "Hello, my name is " + p.firstName 
-}
 
-// Person1 := Person{firstName: "Israel", lastName: "Olu", city: "Lagos", gender: "Male", age: 23}
-// // Person1 := Person{"Israel", "Olu",  "Lagos",  "Male",  23}
-// fmt.Println(Person1.firstName, Person1.age)
-// Person1.age++
-// fmt.Println(Person1)
-
-fmt.Println(Person1.greet())
 
 
 
