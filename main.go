@@ -16,15 +16,30 @@ type Person struct {
 }
 
 //Greeting Method value receiver
-func (p Person) greet() string {
-	return "Hello, my name is " + p.firstName + " " + p.lastName + " and i am " + strconv.Itoa(p.age)
+func (this Person) greet() string {
+	return "Hello, my name is " + this.firstName + " " + this.lastName + " and i am " + strconv.Itoa(this.age)
 }
 
+//hasBirthday method pointer receiver
+func (this *Person) hasBirthday() {
+	this.age++
+}
+
+// GetMarried
+func (this *Person) getMarried(spouseLastName string) {
+	if this.gender == "Female" {
+		return
+	} else {
+		this.lastName = spouseLastName
+	}
+}
 
 //Hello world
 func main() {
 	Person1 := Person{"Israel", "Olu", "Lagos", "Male", 37}
+	Person1.getMarried("Jones")
 	fmt.Println(Person1.greet())
+	
 
 	// myMessage("Israel")
 
